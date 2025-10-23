@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Preparing the environment') {
             steps {
-                sh 'python3 --break-system-packages -m pip install -r requirements.txt'
+                sh 'python3 -m pip --break-system-packages install -r requirements.txt'
             }
         }
         stage('Code Quality') {
